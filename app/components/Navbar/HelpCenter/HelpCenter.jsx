@@ -1,11 +1,47 @@
+
 import React from 'react'
+import Link from 'next/link';
+
 
 
 import Style from "./module.helpcenter.css"
+import { Eagle_Lake } from 'next/font/google';
 
 const HelpCenter = () => {
+
+  const helpCenter = [
+    {
+      name : "About",
+      link : 'about'
+    },
+    {
+      name : "Contact Us",
+      link : 'contact-us'
+    },
+    {
+      name : "Sign Up",
+      link : 'signup'
+    },
+    {
+      name : "Sign In",
+      link : 'signin'
+    },
+    {
+      name : "Subscription",
+      link : 'subscription'
+    }
+  ]
+
   return (
-    <div>HelpCenter</div>
+    <div>
+      {helpCenter.map((element , index) => (
+        <div className={Style.HELPCENTER} key={index + 1} >
+
+          <Link href={{pathname: `${element.link}`}} >{element.name}</Link>
+
+        </div>
+      ))}
+    </div>
   )
 }
 

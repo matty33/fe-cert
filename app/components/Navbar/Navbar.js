@@ -1,4 +1,7 @@
+"use client"
+
 import React , {useState , useEffect, useSyncExternalStore} from 'react'
+
 import Image from 'next/image'
 
 // Importing React Icons
@@ -19,7 +22,7 @@ import Sidebar from './Sidebar/Sidebar'
 // Style File Import
 import Style from "./module.navbar.css"
 import Button from '../Button/Button'
-import { stringifyCookie } from 'next/dist/compiled/@edge-runtime/cookies'
+// import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 const Navbar = () => {
 
@@ -31,42 +34,27 @@ const Navbar = () => {
     const [openSidebar , setopenSidebar] = useState(false);
 
 
-    const openMenu = (event) => {
-        const btnText = e.target.innerText;
-
-        switch(btnText){
-            case "Discover":
-                setdiscover(true)
-                sethelp(false)
-                setprofile(false)
-                setnotification(false)
-
-            case "Help Center":
-                setdiscover(false)
-                sethelp(true)
-                setprofile(false)
-                setnotification(false)
-
-            case "Profile":
-                setdiscover(false)
-                sethelp(false)
-                setprofile(true)
-                setnotification(false)
-
-            case "Notification":
-                setdiscover(false)
-                sethelp(false)
-                setprofile(false)
-                setnotification(true)
-            default:
-                setdiscover(false)
-                sethelp(false)
-                setprofile(false)
-                setnotification(false)
-
+    const openMenu = () => {
+        if(!discover){
+            setdiscover(true)
+            sethelp(false)
+            setprofile(false)
+            setnotification(false)
+            console.log('discover set to true')
+        }else{
+            setdiscover(false)
         }
+    }
 
-       
+    const openHelpCenter = ( ) => {
+        if(!help) {
+            setdiscover(false)
+            sethelp(true)
+            setprofile(false)
+            setnotification(false)
+        }else{
+            sethelp(false)
+        }
     }
 
 
@@ -101,13 +89,11 @@ const Navbar = () => {
             sethelp(false)
             setprofile(false)
             setopenSidebar(true)
-        }else{
+        }else{ 
             setopenSidebar(false)
         }
 
     }
-
-
 
 
   return (
@@ -139,7 +125,7 @@ const Navbar = () => {
 
             {/* Discover  */}
             <div className={Style.NAVBAR_CONTAINER_RIGHT_DISCOVER}>
-                <p onClick={(event) => openMenu(event)}>Discover</p>
+                <p onClick={() => openMenu()}>Discover</p>
                 {discover && (
                         <div className={Style.NAVBAR_CONTAINER_RIGHT_DISCOVER_BOX}>
                          <Discover/>
@@ -152,7 +138,7 @@ const Navbar = () => {
             {/* HELPCENTER */}
             <div className={Style.NAVBAR_CONTAINER_RIGHT_HELPCENTER}>
 
-                <p onClick={(e) => openMenu(e)}>Help Center</p>
+                <p onClick={(e) => openHelpCenter(e)}>Help Center</p>
                 {help && (
                     <div className={Style.NAVBAR_CONTAINER_RIGHT_HELPCENTER_BOX}>
                         <HelpCenter/>
@@ -165,7 +151,7 @@ const Navbar = () => {
             {/* NOTIFICATION */}
             <div className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATION}>
                 <MdNotifications onClick={() => openNotification()} className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATION_ICON} />
-                {help && (
+                {notification && (
                     <div className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATIONBOX}>
                         <Notification/>
                     </div>
@@ -202,6 +188,8 @@ const Navbar = () => {
 
             </div>
         </div>
+
+       
  
         {/* SIDEBAR */}
         {openSidebar && (
