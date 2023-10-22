@@ -14,7 +14,7 @@ import images from "../../../img";
 
 
 
-import Style from "./module.profile.css"
+import Style from "./profile.module.css"
 
 const Profile = () => {
   return (

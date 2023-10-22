@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Imports
-import Style from "./module.notification.css"
+import Style from "./notification.module.css"
 import Image from 'next/image'
 import images  from "../../../img"
 
@@ -25,7 +25,7 @@ const Notification = () => {
 
         <div className={Style.NOTIFICATION_BOX_INFO}>
           <h4>Madhav Gupta</h4>
-          <p>Mention action your user...</p>
+          <p>Mention action of  user...</p>
           <small>3 minutes ago..</small>
         </div>
 
