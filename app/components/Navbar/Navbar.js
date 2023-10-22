@@ -20,7 +20,7 @@ import Profile from './Profile/Profile'
 import Sidebar from './Sidebar/Sidebar'
 
 // Style File Import
-import Style from "./module.navbar.css"
+import Style from "./Navbar.module.css"
 import Button from '../Button/Button'
 // import { ConnectButton } from '@rainbow-me/rainbowkit'
 
@@ -97,7 +97,7 @@ const Navbar = () => {
 
 
   return (
-    <div className={Style.Navbar}>
+    <div className={Style.navbar}>
 
         <div className={Style.NAVBAR_CONTAINER}>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
             {/* Input Div */}
             <div className={Style.NAVBAR_CONTAINER_LEFT_BOX_INPUT}>
                 <div className={Style.NAVBAR_CONTAINER_LEFT_BOX_INPUT_BOX}>
-                    <input  type='text' placeholder='Search...' />
+                    <input  type='text' placeholder='       Search NFT...' />
                     <BsSearch onClick={() => {}} className={Style.SEARCH_ICON}/>
                 </div>
             </div>
@@ -152,7 +152,7 @@ const Navbar = () => {
             <div className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATION}>
                 <MdNotifications onClick={() => openNotification()} className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATION_ICON} />
                 {notification && (
-                    <div className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATIONBOX}>
+                    <div className={Style.NAVBAR_CONTAINER_RIGHT_NOTIFICATION_BOX}>
                         <Notification/>
                     </div>
                 )}
@@ -162,6 +162,7 @@ const Navbar = () => {
 
             {/* CREATE BUTTON SECTIONS */}
             <div  className={Style.NAVBAR_CONTAINER_RIGHT_BUTTON} > 
+            Button
                    
             </div>
             

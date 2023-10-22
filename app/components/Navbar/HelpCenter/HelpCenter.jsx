@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 
-import Style from "./module.helpcenter.css"
+import Style from "./helpcenter.module.css"
 import { Eagle_Lake } from 'next/font/google';
 
 const HelpCenter = () => {

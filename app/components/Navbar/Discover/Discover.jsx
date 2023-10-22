@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 // CSS File Import
-import Style from "./module.discover.css";
+import Style from "./discover.module.css";
 
 const Discover = () => {
 
