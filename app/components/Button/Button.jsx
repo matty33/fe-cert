@@ -1,11 +1,14 @@
 import React from 'react'
 
-// import button  css file
-import Style from "./module.button.css"
+// Internal Import 
+import Style from "./button.module.css"
+import { ST } from 'next/dist/shared/lib/utils'
 
-const Button = () => {
+const Button = ({btnName, handleClick}) => {
   return (
-    <div>Button</div>
+    <div className={Style.BOX}>
+      <button className={Style.BUTTON} onClick={()  => handleClick()} >{btnName}</button>
+    </div>
   )
 }
 

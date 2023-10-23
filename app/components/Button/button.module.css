@@ -1,0 +1,20 @@
+.BUTTON{
+    background-color: var(--icons-color);
+
+    padding: .2rem 1rem;
+    margin: 0  6rem 0  0 ;
+    border: 1px solid var(--icons-color);
+    font-size: 1.2rem;
+    color: var(--shadow-light-color);
+    cursor: pointer;
+    border-radius: .5rem;
+
+    transition: all .3s ease-in;
+    /* box-shadow: var(--box-shadow); */
+}
+
+.BUTTON:hover{
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--icons-color);
+    color: var(--icons-color);
+}

@@ -162,7 +162,7 @@ const Navbar = () => {
 
             {/* CREATE BUTTON SECTIONS */}
             <div  className={Style.NAVBAR_CONTAINER_RIGHT_BUTTON} > 
-            Button
+            <Button btnName="Create"  handleClick={() => console.log('creeate btn clicked')} />
                    
             </div>
             

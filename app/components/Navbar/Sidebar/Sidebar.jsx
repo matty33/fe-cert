@@ -162,8 +162,8 @@ const Sidebar = ({setOpenSideMenu}) => {
     </div>
 
 <div className={Style.SIDEBAR_BUTTON}>
-  <Button  btnName="Create" ></Button>
-  <Button  btnName="Create" ></Button>
+  <Button  btnName="Create"  handleClick={() => console.log('creeate btn clicked')} ></Button>
+  <Button  btnName="Connect"  handleClick={() => console.log('creeate btn clicked')} ></Button>
 
 </div>
 
