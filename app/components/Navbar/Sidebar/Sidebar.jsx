@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 
 import Image from 'next/image';
@@ -105,11 +106,11 @@ const Sidebar = ({setOpenSideMenu}) => {
         <p>Discover the most outstanding articles on all the topics of NFTs and  write your own stroues and share them. </p>
 
         <div className={Style.SIDEBAR_SOCIALS}>
-          <a href="#"><TiSocialLinkedin/></a>
-          <a href="#"><TiSocialFacebook/></a>
-          <a href="#"><TiSocialTwitter/></a>
-          <a href="#"><TiSocialYoutube/></a>
-          <a href="#"><TiSocialInstagram/></a>
+          <a href="#"><TiSocialLinkedin className={Style.SOCIAL_ICONS} /></a>
+          <a href="#"><TiSocialFacebook   className={Style.SOCIAL_ICONS} /></a>
+          <a href="#"><TiSocialTwitter  className={Style.SOCIAL_ICONS}/></a>
+          <a href="#"><TiSocialYoutube   className={Style.SOCIAL_ICONS} /></a>
+          <a href="#"><TiSocialInstagram  className={Style.SOCIAL_ICONS} /></a>
         </div>
       </div>
 
