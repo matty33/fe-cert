@@ -9,6 +9,7 @@ import Hero from '@/components/HeroSection/Hero'
 import Service from '@/components/Service/Service'
 import NFTSlider from '@/components/BigNFTSlider/NFTSlider'
 import Subscribe from '@/components/SubscribeEmail/Subscribe'
+import Title from '@/components/Title/Title'
 
 export default function Home() {
   return (
@@ -17,8 +18,10 @@ export default function Home() {
       <Hero/>
       <Service/>
       <NFTSlider/>
+      <Title heading="Browse by Category" paragraph={"Explore the NFTs in the most featured categories"} />
       <Subscribe/>
       <Footer/>
+      
     </ChakraProvider>
  
   )
