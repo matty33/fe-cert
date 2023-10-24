@@ -10,6 +10,7 @@ import Service from '@/components/Service/Service'
 import NFTSlider from '@/components/BigNFTSlider/NFTSlider'
 import Subscribe from '@/components/SubscribeEmail/Subscribe'
 import Title from '@/components/Title/Title'
+import Category from '@/components/Category/Category'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Service/>
       <NFTSlider/>
       <Title heading="Browse by Category" paragraph={"Explore the NFTs in the most featured categories"} />
+      <Category/>
       <Subscribe/>
       <Footer/>
       
