@@ -11,6 +11,7 @@ import NFTSlider from '@/components/BigNFTSlider/NFTSlider'
 import Subscribe from '@/components/SubscribeEmail/Subscribe'
 import Title from '@/components/Title/Title'
 import Category from '@/components/Category/Category'
+import Filter from '@/components/Filter/Filter'
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <Hero/>
       <Service/>
       <NFTSlider/>
+      <Title heading="Featured NFTs" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
+      <Filter/>
       <Title heading="Browse by Category" paragraph={"Explore the NFTs in the most featured categories"} />
       <Category/>
       <Subscribe/>
