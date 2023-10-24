@@ -17,7 +17,7 @@ import { TbArrowBigLeftLines , TbArrowBigRightLines } from 'react-icons/tb';
 
 const NFTSlider = () => {
 
-    const [idNumber , setidNumber] = useState(1);
+    const [idNumber , setidNumber] = useState(0);
     const sliderData = [
         {
             title:"AIFT NFT",
@@ -88,21 +88,21 @@ const NFTSlider = () => {
 
 
     const increment = useCallback(() => {
-        if(idNumber + 1 > sliderData.length){
-            setidNumber(setidNumber + 1);
+        if(idNumber + 1 < sliderData.length){
+            setidNumber(idNumber + 1);
         }
     },[idNumber , sliderData.length]);
 
     const decrement = useCallback(() => {
-        if(idNumber> 0 ){
-            setidNumber(setidNumber - 1);
+        if(idNumber > 0 ){
+            setidNumber(idNumber - 1);
         }
     },[idNumber])
 
 
-    // useEffect(() => {
-    //     increment()
-    // },[])
+    useEffect(() => {
+        increment()
+    },[])
 
 
   return (

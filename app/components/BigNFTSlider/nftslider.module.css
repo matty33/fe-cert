@@ -176,14 +176,6 @@
     transition: all .3s ease-in;
 }
 
-.LEFT_ARROW_ICON:hover , 
-.RIGHT_ARROW_ICON:hover{
-    background-color: var(--shadow-dark-color);
-    border-radius: 50%;
-    padding: 1rem;
-    /* color: #333; */
-}
-
 .SLIDER_BOX_RIGHT_BOX{
     position: relative; 
     width: 25vw;
@@ -200,6 +192,7 @@
     position: absolute;
     top: 1rem;
     right: 7rem;
+    padding: 0.2rem 0.4rem;
     display: flex;
     align-items: center;
     gap: 1rem;

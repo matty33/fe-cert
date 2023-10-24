@@ -8,6 +8,7 @@ import Footer from '@/components/Footer/Footer'
 import Hero from '@/components/HeroSection/Hero'
 import Service from '@/components/Service/Service'
 import NFTSlider from '@/components/BigNFTSlider/NFTSlider'
+import Subscribe from '@/components/SubscribeEmail/Subscribe'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero/>
       <Service/>
       <NFTSlider/>
+      <Subscribe/>
       <Footer/>
     </ChakraProvider>
  
