@@ -1,0 +1,41 @@
+.SERVICE{
+    width: 80%;
+    margin: 3rem auto;
+    margin-block: 8rem;
+}
+
+.SERVICE_BOX{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.SERVICE_BOX_ITEM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.SERVICE_BOX_ITEM > p >span{
+    background-color: var(--icons-color);
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 1rem;
+}
+
+.SERVICE_BOX_ITEM h3{
+    margin: 1rem 0 0 0 ;
+    color: var(--icons-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.SERVICE_BOX_ITEM p {
+    color: var(--icons-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
