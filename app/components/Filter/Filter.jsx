@@ -3,11 +3,10 @@ import React , {useState} from 'react'
 
 import Style from "./filter.module.css"
 
-import { FaFilter , FaAngleDown , FaAngleUp , FaWallet , FaMusic , FaVideo , FaImages , FaUserAlt } from 'react-icons/fa'
+import { FaFilter , FaAngleDown , FaAngleUp , FaWallet , FaMusic , FaVideo , FaImages , FaUserAlt, FaUser } from 'react-icons/fa'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { MdVerified } from 'react-icons/md'
 import { TiTick } from 'react-icons/ti'
-import { ST } from 'next/dist/shared/lib/utils'
 
 const Filter = () => {
 
@@ -17,6 +16,40 @@ const Filter = () => {
   const [music , setmusic] = useState(true);
 
 
+  const openFilterOptions = () => {
+    if(!filter){
+      setfilter(true)
+    }else{
+      setfilter(false)
+    }
+  }
+
+  const openImage = () =>{
+    if(!image){
+      setimage(true)
+    }else{
+      setimage(false)
+    }
+  }
+
+  
+  const openVideo = () =>{
+    if(!video){
+      setvideo(true)
+    }else{
+      setvideo(false)
+    }
+  }
+  
+  const openMusic = () =>{
+    if(!music){
+      setmusic(true)
+    }else{
+      setmusic(false)
+    }
+  }
+
+
   return (
     <div className={Style.FILTER}>
       <div className={Style.FILTER_BOX}>
@@ -24,14 +57,14 @@ const Filter = () => {
           <button onClick={() => {}}>NFTs</button>
           <button onClick={() => {}}>Arts</button>
           <button onClick={() => {}}>Music</button>
-          <button onClick={() => {}}>NFTs</button>
+          <button onClick={() => {}}>Sports</button>
           <button onClick={() => {}}>Photography</button>
         </div>
 
         <div className={Style.FILTER_BOX_RIGHT}>
           <div className={Style.FILTER_BOX_RIGHT_BOX} onClick={() => openFilterOptions()}>
             <FaFilter/>
-            <span>Filter</span>{filter ? <FaAngleDown/> : <FaAngleUp/>}
+            {filter ? <FaAngleDown/> : <FaAngleUp/>}
           </div>
         </div>
       </div>
@@ -51,8 +84,31 @@ const Filter = () => {
                 <FaImages/> <span>Images</span>
                {image ? <AiFillCloseCircle/>: <TiTick/>}
               </div>
-
             </div>
+
+            <div className={Style.FILTER_BOX_ITEMS_BOX}>
+              <div className={Style.FILTER_BOX_ITEMS_BOX_ITEM_TX} onClick={() => openVideo()}>
+                <FaVideo/> <small>Videos</small>
+                {video ? <AiFillCloseCircle/> : <TiTick/>}
+              </div>
+            </div>
+
+            <div className={Style.FILTER_BOX_ITEMS_BOX}>
+              <div className={Style.FILTER_BOX_ITEMS_BOX_ITEM_TX} onClick={() => openMusic()}>
+                <FaMusic/> <small>Music</small>
+                {music ? <AiFillCloseCircle/> : <TiTick/>}
+              </div>
+            </div>
+
+
+            <div className={Style.FILTER_BOX_ITEMS_BOX}>
+              <div className={Style.FILTER_BOX_ITEMS_BOX_ITEM}>
+                <FaUserAlt/> <small>Verified</small>
+                <MdVerified/>
+              </div>
+            </div>
+
+
 
 
           </div>
