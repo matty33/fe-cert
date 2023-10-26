@@ -59,8 +59,15 @@ contract NFTMarketplace is ERC721URIStorage , ReentrancyGuard , Ownable(msg.send
 
         uint256 new_tokenId = _tokenIds;
 
-        // minting the nft to user
+        // minting the nft to user - is the msg.sender the first owner/admin of the nft?
+        // does student need a wallet to receive it?
         _safeMint(msg.sender, new_tokenId);
+
+        // Logic For Sending The Token to a User
+        // Logic For Teacher to Verify The EAS Status - Logic for teacher to Use EAS.
+        // Uni & Teacher Sign(multi-sig) then the NFT is directly minted to user wallet.
+        // Purpose, time, sigs, is valid y/n, exp, revoked, 
+        // Get hash from EAS and map to the token ID 
 
         //Map the tokenId to the tokenURI (which is an IPFS URL with the NFT metadata)
         _setTokenURI(new_tokenId, tokenURI);
