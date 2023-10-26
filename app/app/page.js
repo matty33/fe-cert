@@ -15,6 +15,7 @@ import Filter from '@/components/Filter/Filter'
 import NFTCard from '@/components/NFTCard/NFTCard'
 import Collection from '@/components/collection/Collection'
 import FollowerTab from '@/components/FollowerTab/FollowerTab'
+import Audiolive from '@/components/AudioLive/Audiolive'
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
       <Hero/>
       <Service/>
       <NFTSlider/>
+      {/* <Title heading="Latest Audio Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} /> */}
+      {/* <Audiolive/> */}
       <Title heading="New Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
       <FollowerTab/> 
       <Collection/>
