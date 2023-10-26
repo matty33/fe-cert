@@ -14,6 +14,7 @@ import Category from '@/components/Category/Category'
 import Filter from '@/components/Filter/Filter'
 import NFTCard from '@/components/NFTCard/NFTCard'
 import Collection from '@/components/collection/Collection'
+import FollowerTab from '@/components/FollowerTab/FollowerTab'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Service/>
       <NFTSlider/>
       <Title heading="New Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
+      <FollowerTab/> 
       <Collection/>
       <Title heading="Featured NFTs" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
       <Filter/>

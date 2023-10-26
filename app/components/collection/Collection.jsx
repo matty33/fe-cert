@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Style from "./Collection.module.css"
 import { BsFillAlarmFill , BsCalendarDate , BsFillCalendarDateFill} from 'react-icons/bs'
 import Day from './DaysComponent/Day'
-import { Elsie_Swash_Caps } from 'next/font/google'
 
 const Collection = () => {
 
