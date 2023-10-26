@@ -13,6 +13,7 @@ import Title from '@/components/Title/Title'
 import Category from '@/components/Category/Category'
 import Filter from '@/components/Filter/Filter'
 import NFTCard from '@/components/NFTCard/NFTCard'
+import Collection from '@/components/collection/Collection'
 
 export default function Home() {
   return (
@@ -21,9 +22,12 @@ export default function Home() {
       <Hero/>
       <Service/>
       <NFTSlider/>
+      <Title heading="New Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
+      <Collection/>
       <Title heading="Featured NFTs" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
       <Filter/>
       <NFTCard />
+     
       <Title heading="Browse by Category" paragraph={"Explore the NFTs in the most featured categories"} />
       <Category/>
       <Subscribe/>
