@@ -6,7 +6,7 @@ import { TiTick } from 'react-icons/ti';
 import Style from "./FollowerTabcard.module.css";
 import images from "../../../img"
 
-const FollowerTabcard = ({key , el}) => {
+const FollowerTabcard = ({index , el}) => {
 
     const [following , setfollowing] = useState(false);
 
@@ -24,7 +24,7 @@ const FollowerTabcard = ({key , el}) => {
 
       <div className={Style.FollowerTabcard_rank}>
         <p>
-            #{key+1}
+            #{index}
         </p>
        </div>
 
@@ -38,7 +38,7 @@ const FollowerTabcard = ({key , el}) => {
         </div>
 
         <div className={Style.FollowerTabcard_box_profile}>
-            <Image src={images.user1} width={70} height={70}   alt="profile pic" className={Style.FollowerTabcard_box_profile_img} />
+            <Image src={el} width={70} height={70}   alt="profile pic" className={Style.FollowerTabcard_box_profile_img} />
 
         </div>
 

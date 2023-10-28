@@ -14,7 +14,7 @@ const Slider = () => {
 
   const dragSlider = useRef();
 
-  const sliderArray = [1,2,3,4,5,6,7]
+  const sliderArray = [1,2,3,4,5,6,7];
 
   useEffect(() => {
     setwidth(dragSlider.current.scrollWidth - dragSlider.current.offsetWidth);

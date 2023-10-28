@@ -5,10 +5,12 @@ import React , {useState} from 'react'
 import Style from "./Followertab.module.css"
 import { RiUserFollowFill , RiUserUnfollowFill , RiAwardLine } from 'react-icons/ri'
 import FollowerTabcard from './FollowerTabcard/FollowerTabcard'
+import images from "../../img"
+
 const FollowerTab = () => {
-    const CardArray = [1,2,3,4]
-    const newsArray = [1,2,3,4,5,6,7,8]
-    const followingArray = [1,2,3,4,5]
+    const CardArray = [images.user1 , images.user2 , images.user3 , images.user4 ]
+    const newsArray = [images.user1 , images.user2 , images.user3 , images.user4 , images.user5, images.user6,images.user7,images.user8]
+    const followingArray = [images.user1 , images.user2 , images.user3 , images.user4 , images.user5,images.user6]
   
     const [popular , setpopular] = useState(false);
     const [news , setnews] = useState(false);
@@ -75,7 +77,7 @@ const FollowerTab = () => {
           popular && (
             <div className={Style.collection_box}>
               {CardArray.map((el , i) => (
-                <FollowerTabcard key={i+1} el={el} />
+                <FollowerTabcard index={i+1}  el={el} />
               ))}
   
             </div>
@@ -86,7 +88,7 @@ const FollowerTab = () => {
           follower && (
             <div className={Style.collection_box}>
               {followingArray.map((el , i) => (
-                <FollowerTabcard key={i+1} el={el} />
+                <FollowerTabcard index={i+1}  el={el} />
               ))}
   
             </div>
@@ -97,7 +99,7 @@ const FollowerTab = () => {
           news && (
             <div className={Style.collection_box}>
               {newsArray.map((el , i) => (
-                <FollowerTabcard key={i+1}  el={el}  />
+                <FollowerTabcard index={i+1}  el={el}  />
               ))}
   
             </div>

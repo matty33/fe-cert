@@ -66,10 +66,13 @@
 @media screen and (max-width: 35em){
     .NOTIFICATION{
         width: 20rem;
-        left:-15rem;
+        left:-11rem;
     }
 
     .NOTIFICATION_BOX{
-        font-size: 12px;
+        font-size: 8px;
     }
+
+
 }
+
