@@ -16,6 +16,7 @@ import NFTCard from '@/components/NFTCard/NFTCard'
 import Collection from '@/components/collection/Collection'
 import FollowerTab from '@/components/FollowerTab/FollowerTab'
 import Audiolive from '@/components/AudioLive/Audiolive'
+import Slider from '@/components/Slider/Slider'
 
 export default function Home() {
   return (
@@ -27,7 +28,9 @@ export default function Home() {
       {/* <Title heading="Latest Audio Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} /> */}
       {/* <Audiolive/> */}
       <Title heading="New Collection" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
-      <FollowerTab/> 
+      <FollowerTab/>
+      <Title heading="Explore NFT Videos" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
+      <Slider/>
       <Collection/>
       <Title heading="Featured NFTs" paragraph={"Discover the most outstanding NFTs in all topics of life"} />
       <Filter/>
