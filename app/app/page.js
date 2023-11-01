@@ -1,5 +1,10 @@
+"use client";
 import Image from 'next/image'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
+import {
+  ThirdwebProvider,
+  metamaskWallet
+} from "@thirdweb-dev/react";
 
 
 // INTERNAL IMPORT 
@@ -20,6 +25,11 @@ import Slider from '@/components/Slider/Slider'
 
 export default function Home() {
   return (
+    <ThirdwebProvider 
+    supportedWallets={[
+      metamaskWallet()
+    ]}
+    clientId="your-client-id">
     <ChakraProvider>
       <Navbar/>
       <Hero/>
@@ -42,6 +52,7 @@ export default function Home() {
       <Footer/>
       
     </ChakraProvider>
+    </ThirdwebProvider>
  
   )
 }

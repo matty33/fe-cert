@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
 import React , {useState , useEffect, useSyncExternalStore} from 'react'
 
 import Image from 'next/image'
-
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 // Importing React Icons
 import {MdNotifications} from "react-icons/md"
 import {BsSearch} from "react-icons/bs"
 import {CgMenuLeft ,CgMenuRight } from "react-icons/cg"
+import Link from 'next/link'
 
 // Importing Images
 import images  from "../../img"
@@ -163,7 +164,6 @@ const Navbar = () => {
             {/* CREATE BUTTON SECTIONS */}
             <div  className={Style.NAVBAR_CONTAINER_RIGHT_BUTTON} > 
             <Button btnName="Create"  handleClick={() => console.log('creeate btn clicked')} />
-                   
             </div>
             
 
@@ -189,6 +189,8 @@ const Navbar = () => {
 
             </div>
         </div>
+
+            
 
        
  

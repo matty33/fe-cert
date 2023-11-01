@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 
 
@@ -15,6 +16,8 @@ import images from "../../../img";
 
 
 import Style from "./profile.module.css"
+// import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 const Profile = () => {
   return (
@@ -42,7 +45,14 @@ const Profile = () => {
         <div    className={Style.PROFILE_MENU_ONE_ITEM}>
           <FaUserAlt/>
           <p>
-            <Link href={{pathname:`/profile`}} >My Profile</Link>
+            <Link href={{pathname:`/studentCerts`}} >My Profile</Link>
+          </p>
+        </div>
+
+        <div    className={Style.PROFILE_MENU_ONE_ITEM}>
+          <FaUserAlt/>
+          <p>
+            <Link href={{pathname:`/issueCertificate`}} >Issue Certificate</Link>
           </p>
         </div>
 
@@ -74,7 +84,7 @@ const Profile = () => {
           <div className={Style.PROFILE_MENU_ONE_ITEM}>
             <TbDownload/>
             <p>
-              <Link href={{pathname:'/disconnect'}}>Disconnect</Link>
+            <ConnectWallet />
             </p>
           </div>
         </div>
